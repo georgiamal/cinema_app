@@ -131,3 +131,4 @@ dist
 
 # IntelliJ/Android Studio
 .idea/
+cinema/config.js
