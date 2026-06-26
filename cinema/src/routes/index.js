@@ -2,9 +2,9 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { MoviesTabs } from "../components/MoviesTabs";
-import Cinema from "../views/Cinemas";
-import CinemaDetails from "../views/CinemaDetails";
-import MovieDetails from "../views/MovieDetails";
+import Cinemas from "../Views/Cinemas";
+import CinemaDetails from "../Views/CinemaDetails";
+import MovieDetails from "../Views/MovieDetails";
 import MovieIcon from "react-native-vector-icons/FontAwesome5";
 import CinemasIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -49,7 +49,7 @@ const TabNavigator = () => {
             })}
         >
             <Tab.Screen name="Kvikmyndir" component={MoviesTabs} />
-            <Tab.Screen name="Kvikmyndahús" component={Cinema} />
+            <Tab.Screen name="Kvikmyndahús" component={Cinemas} />
         </Tab.Navigator>
     );
 };

@@ -70,7 +70,8 @@ export async function fetchMovies(token) {
         );
 
         const text = await response.text();
-
+        console.log("Status:", response.status);
+        console.log("Response:", text);
         if (!response.ok) {
             throw new Error(
                 `HTTP Error: ${response.status}. Response: ${text}`,
@@ -79,7 +80,7 @@ export async function fetchMovies(token) {
         const data = JSON.parse(text);
         return cleanMovieData(data);
     } catch (error) {
-        throw new Error("Error fetching movies: ", error.message);
+        throw new Error(`Error fetching upcoming movies: ${error.message}`);
     }
 }
 
